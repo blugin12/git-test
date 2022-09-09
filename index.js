@@ -395,14 +395,35 @@
 // }
 // console.log(BMIBOTH);
 
-let scoreDolphins = (96 + 108 + 89) / 3;
-let scoreKoalas = (88 + 91 + 110) / 3;
-console.log("scoreDolpins",scoreDolphins,"\nscoreKoalas",scoreKoalas);
+// Code 2 challenge mend
+// let massmark = 78;
+// let heightmark = 1.69;
+// let massjohn = 92;
+// let heightjohn = 1.95;
 
-if (scoreDolphins > scoreKoalas){
-    console.log("The winner of the competition  is scoreDolphins", scoreDolphins);
-}
-else {
-    console.log("The winner of the competition is scoreKoalas", scoreKoalas);
-}
+// // let massmark = 95;
+// // let heightmark = 1.88;
+// // let massjohn = 85;
+// // let heightjohn = 1.76;
 
+// let BMIMark = massmark / heightmark ** 2;
+// let BMIJohn = massjohn / heightjohn ** 2;
+// console.log( BMIMark , BMIJohn );
+
+// if (BMIMark > BMIJohn) {
+//     console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`)
+// } else if (BMIMark < BMIJohn){
+//     console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`)
+// }
+
+// Code 3 challenge
+// let scoreDolphins = (96 + 108 + 89) / 3;
+// let scoreKoalas = (88 + 91 + 110) / 3;
+// console.log("scoreDolpins",scoreDolphins,"\nscoreKoalas",scoreKoalas);
+
+// if (scoreDolphins > scoreKoalas){
+//     console.log("The winner of the competition  is scoreDolphins", scoreDolphins);
+// }
+// else {
+//     console.log("The winner of the competition is scoreKoalas", scoreKoalas);
+// }
