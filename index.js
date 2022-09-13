@@ -365,9 +365,88 @@
 
 // for (let i = 0 ; i < 3 ; i++ ){
 //     for ( let j= 0 ; j < 3 ; j++ ){
-//         console.log(`vale at coord(${i},${j}`, '');
+//         console.log(`vale at coord(${i},${j})`, '');
 //     }
 // }
+// console.log('Done!');
+
+//this code continue isn't allowed here 
+// if (i > 5 ){
+//     console.log(i);
+// } else {
+//     continue;
+// }
+
+// can't run code
+// outer: for (let i = 0 ; i < 3 ; i++ ) {
+//     for (let j = 0 ; j  < 3 ; j++ ) {
+//         let input = prompt (`Value at coords (${i},${j})`, '');
+//         if (!input) break outer;
+//     }
+// }
+// console.log('Done!');
+
+// let i = 3 ;
+// while (i){
+//     console.log(i--);
+// }
+
+//unlimited
+// let i = 3;
+// while (i) {
+//     console.log(i++);
+// }
+
+// let i = 3 ;
+// console.log(i--);
+// console.log(i--);
+// console.log(i--);
+
+// let i = 0;
+// while (i++ < 5) 
+// console.log( i );
+
+// let i = 0;
+// while (++i < 5) console.log( i );
+
+// for (let i = 0 ; i < 5 ; ++i) console.log(i);
+// for (let i = 0 ; i < 5 ; i++)console.log(i);
+
+// for (i = 2 ; i <= 10 ; i++ ){
+//     if (i % 2 == 0) {
+//         console.log(i);
+//     }
+// }
+
+// for (let i = 0 ; i < 3 ; i++){
+//     console.log(`Number is ${i}!` );
+// }
+
+// let i = 0;
+// while (i < 3){
+//     console.log(`Number is ${i}!`);
+//     i++;
+// }
+
+// let num;
+// do{
+//     num = prompt("Enter a number gteater than 100!", 0);
+// } while (num <=100 && num);
+
+// let n = 10 ; 
+// nextprime:
+// for (let i = 2; i <= n ; i++) {
+//     for (let j = 2 ; j < i ; j++) {
+//         if ( i % j == 0) continue nextprime;
+//     }
+//     console.log(i);
+// }
+
+// let i = 0;
+// do {
+//     console.log(i);
+//     i++;
+// } while (i < 3);
 
 // Code 2 Challenge2
 // let Mark = 'name';
@@ -416,7 +495,7 @@
 //     console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`)
 // }
 
-// Code 3 challenge
+// Code 3 challenge do 
 // let scoreDolphins = (96 + 108 + 89) / 3;
 // let scoreKoalas = (88 + 91 + 110) / 3;
 // console.log("scoreDolpins",scoreDolphins,"\nscoreKoalas",scoreKoalas);
@@ -428,4 +507,455 @@
 //     console.log("The winner of the competition is scoreKoalas", scoreKoalas);
 // }
 
-Hello
+//Code 3 challenge result
+// let scoreDolphins = (96 + 108+ 89) / 3 ;
+// let scoreKoalas = ( 88 + 91 + 110) / 3 ;
+// console.log(scoreDolphins, scoreKoalas);
+
+// if ( scoreDolphins > scoreKoalas) {
+//     console.log('Dolphins win the trophy');
+// } else if (scoreKoalas > scoreDolphins ){
+//     console.log('Koalas the win trophy');
+// } else if (scoreDolphins === scoreKoalas){
+//     console.log('Both win the trophy');
+// }
+
+//BONUS 1
+// let scoreDolphins = (97 + 112 + 80) / 3 ;
+// let scoreKoalas = (109 + 95 + 50) / 3 ;
+// console.log(scoreDolphins, scoreKoalas);
+
+// if(scoreDolphins > scoreKoalas && scoreDolphins >= 100){
+//     console.log('Dolphins win the trophy');
+// } else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+//     console.log('Koalas win the trophy');
+// } else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100) {
+//     console.log('Both win the trophy!');
+// } else {
+//     console.log('No one wins the trophy XD');
+// }
+
+//BONUS 2
+// let scoreDolphins = (97 + 112 + 101) / 3 ;
+// let scoreKoalas = (109 + 95 + 106) / 3 ;
+// console.log(scoreDolphins, scoreKoalas);
+
+// if (scoreDolphins> scoreKoalas && scoreDolphins >= 100) {
+//     console.log('Dolphins win the trophy');
+// } else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+//     console.log('koalas win the trophy');
+// } else if (scoreDolphins === scoreKoalas & scoreDolphins >= 100 && scoreKoalas >= 100) {
+//     console.log('Both win the trophy');
+// } else {
+//     console.log('No one win the trophy XD');
+// }
+
+// let sum = 0 ;
+// while (true) {
+//     let vale = +prompt ('Enter the number', '');
+//     if (!value) break ;
+//     sum += value;
+// }
+// console.log('Sum' + sum);
+
+// let year = prompt('In which year was ECMAscripte-2015 specification published?', '');
+// if ( year == 2015)
+//     console.log('You are right!' );
+
+// let year = prompt ('In which year was ECMAscripte-2015 specification published?', '');
+// if ( year == 2015){
+//     console.log("That's correct!");
+//     console.log('You are smart!');
+// }
+
+// let year = prompt ('In which year was ECMAscripte-2015 specification published?', '');
+// if (year == 2015){
+//     console.log("You guessed it right!");
+// } else {
+//     console.log("How can you be so wrong?");
+// }
+
+// let year = prompt ('In which year was ECMAscripte-2015 specification published?', '');
+// if (year < 2015 ){
+//     console.log('To early ...');
+// } else if (year > 2015) {
+//     console.log('To late');
+// } else {
+//     console.log('Exactly!');
+// }
+
+// let accessAllowed;
+// let age = prompt('How old are you?', '');
+// if ( age > 18 ) {
+//     accessAllowed = true ;
+// } else{
+//     accessAllowed = false ;
+// }
+// console.log(accessAllowed);
+
+// let age = prompt ('age?', '');
+// let message = (age < 3) ? 'Hi, baby!' :
+//     (age < 18) ? 'Hello! ' :
+//     (age < 100) ? 'Greetings!' :
+//     'What an unsual age!';
+// console.log(message);
+
+// let message;
+// let age = prompt ('age!', '');
+// if (age < 3 ){
+//     message = 'Hi, Baby!';
+// } else if (age < 18 ) {
+//     message = 'Hello!';
+// } else if (age < 100 ) {
+//     message = 'Greeting!';
+// } else {
+//     message = 'What an unsual age!';
+// }
+// console.log(message);
+
+// let company = prompt('Which company created JavaScript','');
+// (company == 'Netscape') ?
+// console.log('Right!') : alert ('Wrong.') ;
+
+// let company = prompt ( 'Which company created JavaScript', '');
+// if ( company == 'Netscape') {
+//     console.log('Right!');
+// } else {
+//     console.log('Wrong.');
+// }
+
+// if ("0"){
+//     console.log('Hello');
+// }
+
+// let value = ("Which is the 'Official' name if JavaScript", '');
+// if (value == 'ECMAScript') {
+//     console.log('Right!');
+// } else {
+//     console.log("You don't know ECMAScript1");
+// }
+
+// let value = prompt ('Try a number', 0);
+// if (value > 0) {
+//     console.log(1);
+// } else if (value < 0) {
+//     console.log(-1);
+// } else {
+//     console.log(0);
+// }
+
+// let result;
+// if (a + b < 4 ) {
+//     console.log('Below');
+// } else {
+//     console.log('Over');
+// }
+
+// let result = (a + b < 4) ? true : false ;
+
+// let message;
+// if (login == 'Employee') {
+//   message = 'Hello';
+// } else if (login == 'Director') {
+//   message = 'Greetings';
+// } else if (login == '') {
+//   message = 'No login';
+// } else {
+//   message = '';
+// }
+
+// let login = prompt ('Login','');
+// let message = (login == 'Employee') ? 'Hello!' :
+//     (login == 'Director') ? 'Greeting' :
+//     (login == '') ? 'No login' :
+//     '';
+// console.log(message);
+
+// function showMessage () {
+//     console.log('Hello eveyone!');
+// }
+// showMessage();
+
+// function showMessage(){
+//     let message = "Hello, I'm JavaScript!";
+//     console.log(message);
+// }
+// showMessage();
+
+// let userName = 'John';
+// function showMessage (){
+//     let message = 'Hello, ' + userName;
+//     console.log(message);
+// }
+// showMessage();
+
+// let userName = 'John';
+// function showMessage(){
+//     userName = 'Bob';
+//     let message = 'Hello, ' + userName ;
+//     console.log(message);
+// }
+// showMessage();
+
+// function showMessage (from , text ){
+//     console.log(from + ': ' + text);
+// }
+// showMessage('Ann','Hello!');
+// showMessage('Ann', "What's up!");
+
+// function showMessage( from , text){
+//     from = '*' + from + '*';
+//     console.log(from + ': ' + text);
+// }
+// let from = 'Ann';
+// showMessage(from, 'Hello!');
+// console.log(from);
+
+// Simple test
+// function showMessage (from ,text) {
+//     from = '*' + from + '*';
+//     console.log(from + ': ' +text);
+// }
+// let from = 'Crush';
+// showMessage(from, "Hello");
+// showMessage(from, "What are you doing?")
+// showMessage(from, "Work hard na, Please Take care ^^")
+// console.log(from);
+
+// function showMessage(from , text = "No text given"){
+//     console.log(from + ': ' + text);
+// }
+// showMessage("Ann");
+
+// function showMessage (from , text ) {
+//     if (text == undefined ) {
+//         text = "no text given";
+//     }
+//     console.log(from + ': ' + text);
+// }
+// showMessage()
+
+// function showMessage (from , text ) {
+//     text = text || 'no text given';
+//     console.log(from + ': ' + text);
+// }
+// showMessage()
+
+// function showMessage( text ) {
+//     if( text == undefined){
+//         text = 'empty given';
+//     }
+//     console.log(text);
+// }
+// showMessage();
+
+// function showMessage(text){
+//     text = text || 'empty given';
+//     console.log(text);
+// }
+// showMessage();
+
+// function showCount ( count){
+//     console.log(count ??  "unknown");
+// }
+// showCount(0);
+// showCount(null);
+// showCount();
+
+// function sum(a,b){
+//     return a + b ;
+// }
+// let result = sum (1,2);
+// console.log(result);
+
+// function checkAge(age){
+//     if (age >= 18){
+//         return true;
+//     } else {
+//         return confirm ('Do you have permission from youe parents?');
+//     }
+// }
+// let age = prompt('How old are you', 18);
+// if (checkAge(age)){
+//     console.log('Access granted' );
+// } else {
+//     console.log('Access denied' );
+// }
+
+// Not Working
+// function showMovie (age){
+//     if (!check(age)){
+//         return;
+//     }
+//     console.log("showing you the movie");
+// }
+
+// function doNothing(){ /* empty */}
+// console.log(doNothing() === undefined);
+
+// function doNothing(){
+//     return;
+// }
+// console.log(doNothing() === undefined);
+
+// Not Working
+// function showPrimes(n){
+//     nextPrime: for (let i = 2 ; i < n ; i++) {
+//         for (let j = 2 ; j < i ; i++) {
+//             if ( i % j == 0) continue nextPrime;
+//         }
+//         console.log(i);
+//     }
+// }
+
+// Not Working
+// function showPrimes(n){
+//     for (let i = 2 ; i < n ; i++){
+//         if (!isPrime(i)) continue;
+//         console.log(i);
+//     }
+// }
+// function isPrime(n) {
+//     for (let i = 2 ; i < n ; i++) {
+//         if (n % i == 0 ) return false;
+//     }
+//     return true;
+// }
+
+// Not Working
+// function checkAge(){
+//     if ( age > 18){
+//         return true;
+//     } else {
+//         return confirm('Did your parents allow you?');
+//     }
+// }
+
+// Not Working
+// function checkAge(){
+//     if (age > 18){
+//     }
+//     return confirm ('Did your parents allow you?');
+// }
+
+// Not Working
+// function checkAge(){
+//     return (age < 18 ) ? true : confirm ('Did your parents allow you?');
+// }
+
+// Not working
+// function checkAge(){
+//     return (age < 18 ) || confirm ('Did your parents allow you?');
+// }
+
+// Not Working
+// min (2 , 5) == 2
+// min (3 , -1) == -1
+// min (1, 1) == 1
+// function min (a, b) {
+//     if (a < b ){
+//         return(a);
+//     } else {
+//         return(b);
+//     }
+// }
+
+// Not Working
+// function min (a, b){
+//     return a < b ? 'a' : 'b';
+// }
+
+// function pow( x, n ){
+//     let result = x ;
+//     for (let i = 1 ; i < n ; i++){
+//         result *= x;
+//     }
+//     return result ;
+// }
+// let x = prompt ("x?", '');
+// let n = prompt ("n?", '');
+// if (n < 1 ){
+//     console.log(`Power ${n} is not supported, use a positive integer`);
+// } else {
+//     console.log(pow(x , n));
+// }
+
+// code 4 challenge
+// let MarkMiller = 'fullname';
+// let massmark = 78;
+// let heightmark = 1.69;
+// let BMImark = massmark / (heightmark * heightmark);
+// let JohnSmith = 'fullname';
+// let massjohn = 92;
+// let heightjohn = 1.95;
+// let BMIjohn = massjohn / (heightjohn * heightjohn);
+// function calcBMI () {
+//     if (BMIjohn > BMImark){
+//         console.log("John Smith's BMI ", BMIjohn ," is higher than Mark Miller's " , BMImark ,"!" );
+//     } else {
+//         console.log("Mark MIller's BMI ", BMImark ," is higher than John Smith's " , BMIjohn ,"!" );
+//     };    
+// }
+// calcBMI();
+
+// Answer code 4 Challenge
+// let mark = {
+//     fullname : 'Mark Miller',
+//     mass : 78,
+//     height : 1.69,
+// };
+// let john = {
+//     fullname : 'john Smith',
+//     mass : 92,
+//     height : 1.95,
+// };
+// function calcBMIMark() {
+//     return mark.mass / (mark.height ** 2);
+// }
+// function calcBMIJohn() {
+//     return john.mass / (john.height ** 2);
+// }
+// if (calcBMIMark() > calcBMIJohn()) {
+//     console.log(`${mark.fullname}'s BMI (${calcBMIMark()}) is higher than ${john.fullname}'s BMI (${calcBMIJohn()})`);
+// } else if (calcBMIJohn() > calcBMIMark()) {
+//     console.log(`${john.fullname}'s BMI (${calcBMIJohn()}) is higher than ${mark.fullname}'s BMI (${calcBMIMark()})`);
+// }
+
+// let sum = (a,b) => a + b ;
+// console.log(sum(1,2));
+
+// let double = n => n * 2;
+// console.log(double(3));
+
+// let sayhi= () => console.log('Hello!');
+// sayhi();
+
+// let age = prompt("What's your age", 18);
+// let welcome = (age < 18)?
+//  () => console.log('Hello!') :
+//  () => console.log('Greeting');
+//  welcome();
+
+// let sum = (a,b) => {
+//     let result = a + b ;
+//     return result;
+// };
+// console.log(sum(1,2));
+
+// code 4 challenge
+let MarkMiller = 'fullname';
+let massmark = 78;
+let heightmark = 1.69;
+let BMImark = massmark / (heightmark * heightmark);
+let JohnSmith = 'fullname';
+let massjohn = 92;
+let heightjohn = 1.95;
+let BMIjohn = massjohn / (heightjohn * heightjohn);
+function calcBMI () {
+    if (BMIjohn > BMImark){
+        console.log("John Smith's BMI ", BMIjohn ," is higher than Mark Miller's " , BMImark ,"!" );
+    } else {
+        console.log("Mark MIller's BMI ", BMImark ," is higher than John Smith's " , BMIjohn ,"!" );
+    };    
+}
+calcBMI();
