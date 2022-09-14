@@ -942,20 +942,108 @@
 // };
 // console.log(sum(1,2));
 
-// code 4 challenge
-let MarkMiller = 'fullname';
-let massmark = 78;
-let heightmark = 1.69;
-let BMImark = massmark / (heightmark * heightmark);
-let JohnSmith = 'fullname';
-let massjohn = 92;
-let heightjohn = 1.95;
-let BMIjohn = massjohn / (heightjohn * heightjohn);
-function calcBMI () {
-    if (BMIjohn > BMImark){
-        console.log("John Smith's BMI ", BMIjohn ," is higher than Mark Miller's " , BMImark ,"!" );
-    } else {
-        console.log("Mark MIller's BMI ", BMImark ," is higher than John Smith's " , BMIjohn ,"!" );
-    };    
-}
-calcBMI();
+// let sum = (a, b) => {
+//     let result = a + b;
+//     return result;
+// }
+// console.log(sum(2 ,1));
+
+// function ask(question, yes,no) {
+//     if (confirm(question)) yes();
+//     else no();
+// }
+// ask(
+//     "Do you agree?",
+//     function () {console.log("You agree.");},
+//     function () {console.log("You canceled the execution.");}
+// );
+
+// function ask(question , yes , No){
+//     if(confirm(question)) yes();
+//     else No();
+// }
+// ask(
+//     "Do you agree?",
+//     () => console.log("You agree."),
+//     () => console.log("You canceled the execution.")
+// );
+
+// function func(a,b){
+//     let sum = a + b ;
+//     return sum; 
+// }
+// console.log(func(1,2));
+
+// let array1 =[1, 4, 9, 16];
+// let map1= array1.map(x => x * 2);
+// console.log(map1);
+
+// let number =[1, 4, 9];
+// let roots = number.map((num) => Math.sqrt(num));
+// console.log(number);
+// console.log(roots);
+
+// let kvarray = [
+//     {key: 1 , value: 10},
+//     {key: 2 , value: 20},
+//     {key: 3 , value: 30},
+// ];
+// let reformattedArray = kvarray.map (({key, value}) => ({[key]: value}));
+// console.log(reformattedArray);
+// console.log(kvarray);
+
+// let number = [ 1 ,4 , 9];
+// let double = number.map((num) => num * 2);
+// console.log(number);
+// console.log(double);
+
+// async function f (){
+//     return 1;
+// }
+// f().then(console.log);
+
+// async function f(){
+//     return Promise.resolve(1);
+// }
+// f ().then(console.log);
+
+// async function f() {
+//     let promise = new Promise ((resolve , reject) => {setTimeout(() => resolve("done!"), 1000)});
+//     let result = await promise;
+//     console.log(result);
+// }
+// f();
+
+// Not winking
+// function f(){
+//     let promise = promise.resolve(1);
+//     let result = await.promise;
+// }
+
+// class Thenable {
+//     constructor(num){
+//         this.num = num;
+//     }
+//     then(resolve, reject) {
+//         console.log(resolve);
+//         setTimeout(() => resolve(this.num * 2),1000);
+//     }
+// }
+// async function f() {
+//     let result = await new Thenable (1);
+//     console.log(result);
+// }
+// f();
+
+// class Waiter {
+//     async wait () {
+//         return await Promise.resolve(1);
+//     }
+// }
+// new Waiter()
+//     .wait()
+//     .then(console.log);
+
+const fetchData = () => 'hello world';
+
+console.log(fetchData());
