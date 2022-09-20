@@ -1044,6 +1044,674 @@
 //     .wait()
 //     .then(console.log);
 
-const fetchData = () => 'hello world';
+// const fetchData = () => 'hello world';
 
-console.log(fetchData());
+// console.log(fetchData());
+
+// class Waiter {
+//     async  wait (){
+//         return await Promise.resolve(1);
+//     }
+// }
+// new Waiter()
+//     .wait()
+//     .then(console.log)
+
+// async function f() {
+//     try {
+//         let response = await fetch('http://no-such-url');
+//     } catch (err) {
+//         console.log(err);
+//     }
+// }
+// f();
+
+// async function f() {
+//     try {
+//         let response = await fetch ('/no-user-here')
+//         let user = await response.json();
+//     } catch (err) {
+//         console.log(err);
+//     }
+// }
+// f();
+
+// async function f() {
+//     let response = await fetch ('http//no-such-url');
+// }
+// f().catch(console.log);
+
+// function loadJson(url) {
+//     return fetch (url)
+//     .then(response => {
+//         if (response.status == 200) {
+//             return response.json();
+//         } else {
+//             throw new Error (response.status);
+        
+// }
+//     });
+// }
+// loadJson('http:javascript.info/no-such-user.json')
+//     .catch(console.log);
+
+// async function loadJson(url) {
+//     let response = await fetch(url);
+//     if (response.status == 200) {
+//         let json = await response.json();
+//         return json;
+//     }
+//     throw new Error(response.status);
+// }
+// loadJson('http://javascript.info/no-such-user.json')
+//     .catch(console.log);
+
+// class HttpError extends Error {
+//     constructor(response) {
+//         super(`${response.status} for ${response.url}`);
+//         this.name = 'HttpError';
+//         this.response = response;
+//     }
+// }
+// function loadJson(url) {
+//     return fetch(url)
+//     .then(response => {
+//         if (response.status == 200) {
+//         return response.json();
+//     } else {
+//         throw new HttpError(response);
+//     }
+//     });    
+// }
+// function demoGithubUser() {
+//     let name = prompt("Enter a name?", "iliakan");
+//     return loadJson(`https://api.github.com/user/${name}`)
+//     .then(user => {
+//         console.log(`Full name: ${user.name}.`);
+//         return user;
+//     })
+//     .catch(err => {
+//         if (err instanceof HttpError && err.response.status == 404) {
+//             console.log("No such user, please reenter.");
+//             return demoGithubUser();
+//         } else {
+//             throw err;
+//         }
+//     });
+// }
+// demoGithubUser();
+
+// Not Working
+// class HttpError extends Error {
+//     constructor(response) {
+//         super(`${response.statue} for ${response.url}`);
+//         this.name = 'HttpError';
+//         this.response = response;
+//     }
+// }
+// async function loadJson(url) {
+//     let response = await fetch(url);
+//     if (response.status == 200) {
+//         return response.json();
+//     } else {
+//         throw new HttpError(response);
+//     }
+// }
+// async function demoGithubUser() {
+//     let user;
+//     while(true) {
+//         let name = prompt("Enter a name?", "iliakan");
+//         try {
+//             user = await loadJson(`http://qpi.github.com/user/${name}`);
+//             break;
+//         } catch (err) {
+//             if (err instanceof HttpError && err.response.statue == 404) {
+//                 console.log("No such user, please reenter.");
+//             } else {
+//                 throw err;
+//             }
+//         }
+//     }
+//     console.log(`Full name: ${user.name}.`);
+//     return user;
+// }
+// demoGithubUser();
+
+// No Working
+// async function wait() {
+//     await new Promise(resolve => setTimeout(resolve,1000));
+//     return 10;
+// }
+// function f(){
+//     wait().then(result => console.log());
+// }
+// f();
+
+// Not working here
+// try {
+//     console.log('Start of try run');
+//     console.log('End of try run');
+// } catch (err){
+//     console.log('catch is ignored, because there is no errors');
+// }
+
+// Not working here
+// try {
+//     console.log('Start of try run');
+//     lalala;
+//     console.log('End of try (never reach)');
+// } catch (err) {
+//     console.log(`Error has occurred!`);
+// }
+
+// Not working here
+// try {
+//     sfsfdfgsfhsfgjtgar
+// } catch (err) {
+//     console.log("The engine can't understand this code, it's invalid");
+// }
+
+// Not working here
+// try {
+//     setTimeout (function() {
+//         noSuchVariable;
+//     } , 1000);
+// } catch (err) {
+//     console.log("Won't work");
+// }
+
+// Not working here
+// try {
+// }  catch (err) {
+//     console.log()
+// }
+
+// Not working here
+// try {
+//     lalala;
+// } catch (err) {
+//     console.log(err.name);
+//     console.log(err.message);
+//     console.log(err.stack);
+//     console.log(err);
+// }
+
+// Not working here
+// let json = '{"name" : "john" , "age" : 30 }';
+// let user = JSON.parse(json);
+// console.log(user.name);
+// console.log(user.age);
+
+// Not working here
+// let json = "{bad john}";
+// try {
+//     let user = JSON.parse(json);
+//     console.log(user.name);
+// } catch (err) {
+//     console.log("Our apologies, the data has error, we'll try to request it one more time.");
+//     console.log(err.name);
+//     console.log(err.message);
+// }
+
+// Not working here
+// let json = '{"age" : 30}';
+// try {
+//     let user = JSON.parse(json);
+//     console.log(user.name)
+// } catch (err) {
+//     console.log("doesn't execute");
+// }
+
+// Not working here
+// let error = new Error ("Things happen o_0");
+// console.log(error.name);
+// console.log(error.message);
+
+// Not working here
+// try {
+//     JSON.parse("{bad json o_0}");
+// } catch (err) {
+//     console.log(err.name);
+//     console.log(err.message);
+// }
+
+// Not working here
+// let json = '{"age":  30}';
+// try {
+//     let user = JSON.parse(json);
+//     if (!user.name){
+//         throw new SyntaxError("Imcomplete data: no name");
+//     }
+//     console.log(user.name);
+// } catch (err) {
+//     console.log ("json Error: " + err.message);
+// }
+
+// try {
+//     user ={ /*...*/ };
+// } catch (err) {
+//     console.log('RefernceError');
+// }
+
+// let json = '{"age": 30}';
+// try {
+//     let user = JSON.parse (json);
+//     if (!user.name) {
+//         throw new SyntaxError("Imcompete data: no name");
+//     }
+//     blabla();
+//     console.log(user.name);
+// } catch (err) {
+//     if (err instanceof SyntaxError) {
+//         console.log("JSON Error: "+ err.message);
+//     } else {
+//         throw err;
+//     }
+// }
+
+// function readData() {
+//     let json = '{"age": 30}';
+//     try {
+//         blabla();
+//     } catch (err) {
+//         if (!(err instanceof SyntaxError)) {
+//             throw err;
+//         }
+//     }
+// }
+// try {
+//     readData();
+// } catch (err) {
+//     console.log("External catch got: " + err );
+// }
+
+// try {
+//     console.log('try');
+//     if (confirm('Make an error?')) BAD_CODE();
+// } catch (err) {
+//     console.log('catch');
+// } finally {
+//     console.log('finally');
+// }
+
+// let num = +prompt("Enter a positive integer number?", 35)
+// let diff, result;
+// function fib(n) {
+//     if(n<0 || Math.trunc(n) !=n) {
+//         throw new Error("Must not be negative, and also an integer.");
+//     }
+//     return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+// }
+// let start =Date.now();
+// try {
+//     result = fib(num);
+// } catch(err) {
+//     result = 0;
+// } finally {
+//     diff =Date.now() - start;
+// }
+// console.log(result || "error occurred");
+// console.log(`execution took ${diff}ms`);
+
+// function func() {
+//     try{
+//         return 1;
+//     } catch (err) {
+//         /*...*/
+//     } finally {
+//         console.log('finally');
+//     }
+// }
+// console.log(func());
+
+// window.onerror = function(message, url ,line ,col, error) {
+//     console.log(`${message}\n At ${line}:${col} of ${url}`);
+// };
+// function readData(){
+//     badFunc();
+// }
+// readData();
+
+// function f() {
+//     try {
+//         console.log('Start');
+//         return "result";
+//     } catch (err) {
+//         /////
+//     } finally {
+//         console.log('cleanup!');
+//     }
+// }
+// f();
+
+// function f() {
+//     try {
+//         console.log('start');
+//         throw new Error("an Error");
+//     } catch (err) {
+//         if("Can't handle the error") {
+//             throw err;
+//         }
+//     } finally {
+//         console.log('Cleanup');
+//     }
+// }
+// f();
+
+// let array1 = [1, 4, 9, 16];
+// let map1 = array1.map(x => x * 2);
+// console.log(map1);
+
+// let sum = (a,b) => a + b ;
+// console.log(sum(1,2));
+
+// let array1 = [1, 4, 9, 16];
+// let map1 = array1.map( x => x * 2);
+// console.log(map1);
+
+// let numbers = [1 ,4 ,9];
+// let roots = numbers.map((num) => Math.sqrt(num));
+// console.log(roots);
+// console.log(numbers);
+
+// let kvarray = [
+//     {key: 1 , value : 10 },
+//     {key: 1 , value : 20 },
+//     {key: 1 , value : 30 },
+//     {key: 1 , value : 40 },
+// ];
+// let reformattedArry =kvarray.map(({key ,value}) => ({ [key]: value}));
+// console.log(kvarray);
+
+// let number = [ 1, 4, 9];
+// let roots = number.map((num) => Math.sqrt(num));
+// console.log(number);
+// console.log(roots);
+
+// let kvarray = [
+//     { key: 1, value: 10 },
+//     { key: 2, value: 20 },
+//     { key: 3, value: 30 },
+// ];
+// let reformattedArray = kvarray.map(({key ,value}) => ({ [key]: value}));
+// console.log(kvarray);
+// console.log(reformattedArray);
+
+// let number = [ 1, 4, 9];
+// let double = number.map((num) => num * 2);
+// console.log(double);
+// console.log(number);
+
+// let map = Array.prototype.map;
+// let charcodes = map.call('Hello World', (x) => x.charcodes)
+
+//Not Working
+// let map = Array.prototype.map;
+// let charcodes = map.call('Hello World', (x) => x.charcodeAt(0));
+// console.log(charcodes);
+
+//Not Working
+// let elems = document.querySelectorAll('select option:check');
+// let value = Array.prototype.map.call(elems, ({value}) => value);
+
+// let numbers = [ 1,2 ,3,4];
+// let filterredNumber = numbers.map((num, index) => {
+//     if (index < 3) {
+//         return num;
+//     }
+// });
+// console.log(numbers);
+// console.log(filterredNumber);
+
+
+//Not Working
+// export function sayHi(user) {
+//     console.log('Hello, ${user}');
+// }
+
+//Not Working
+// import {sayHi} from './sayHi.js';
+// console.log(sayHi);
+// sayHi('john');
+
+// export function sayHi(user) {
+//     return `Hello, ${user}!`;
+// }
+
+// import {admin} from './admin.js';
+// admin.name = "Pete";
+// import {admin} from './admin.js';
+// console.log(admin.name);
+
+//Not Working
+// export let months = ['jan','feb','mar','apr', 'aug', 'sep','out', 'nov','dec'];
+// export let MODULES_BECAME_STANDARD_YEAR = 2015;
+// export class User {
+//     constructor(name){
+//         this.name = name;
+//     }
+// }
+
+//Not Working
+// function sayHi(user) {
+//     console(`Hello, ${user}!`);
+// }
+// function sayBye(user) {
+//     console(`Bye, ${user}!`);
+// }
+// export {sayHi, sayBye};
+
+//Now Working
+// import * as say from './say.js';
+// say.sayHi('John');
+// say.sayBye('John');
+
+//Not Working
+// import {login,logout} from '/helpers.js';
+// export {login,logout};
+// import User from './user.js';
+// export {User};
+
+//Not Working
+// export function hi () {
+//     console.log(`hello`);
+// }
+// export function bye () {
+//     console.log(`Bye`);
+// }
+
+//Start from the beginner
+// let user = 'john',
+//     age = 25,
+//     message = 'Hello';
+// console.log(user,age,message);
+
+// let user = 'john';
+// let age = 25 ;
+// let message = 'Hello';
+// console.log(user,age,message);
+
+// let user = 'john'
+//     ,age =25
+//     ,message = 'Hello';
+// console.log(user,age,message);
+
+// let message;
+// message = 'Hello';
+// message = 'World';
+// console.log(message);
+
+// let hello = 'Hello World';
+// let message;
+// message = hello;
+// console.log(hello);
+// console.log(message);
+
+// let $ = 2;
+// let _ = 1;
+// console.log($ + _);
+
+// num = 5;
+// console.log(num);    
+
+// const COLOR_RED = "#F00";
+// const COLOR_GREEN = "#0F0";
+// const COLOR_BLUE = "#00F";
+// const COLOR_ORANGE = "#FF7F00";
+// let color = COLOR_ORANGE;
+// console.log(color);
+
+// let admin , name;
+// name = "john";
+// admin = name;
+// console.log(name);
+
+//Not Working
+// function showPrimes (n) {
+//     nextPrimes:
+//     for (let i = 2; i < n ; i++) {
+//         for (let j = 2 ; j < i ; j++) {
+//             if ( i % j == 0) continue nextPrimes;;
+//         }
+//         console.log(i);
+//     }
+// }
+
+//Not Working
+// function showPrimes (n) {
+//     for (let i =2 ; i < n ; i++) {
+//         if (!isPrimes(i)) continue;
+//         console.log(i);
+//     }
+// }
+// function isPrime(n) {
+//     for (let i = 2 ; i < n ; i++) {
+//         if (n % i == 0) return false;
+//     }
+// }
+
+// for (let i = 0 ; i < 10 ; i++) {
+//     let drop = getWhiskey();
+//     smell(drop);
+//     add(drop,glass);
+// }
+// for(let t = 0 ; t , 3 ; t++) {
+//     let tomato = getTomato();
+//     examine(tomato);
+//     let juice = press(tomato);
+//     add
+// }
+
+//Not Working
+// addWhiskey(glass);
+// addJuice(glass);
+// function addWhiskey(container) {
+//     for (let i = 0 ; i < 10 ; i++) {
+//         let drop = addWhiskey ();
+//     }
+// }
+// function addJuice(container) {
+//     for (let t = 0 ; t < 3 ; t++) {
+//         let tomato =getTomato();
+//     }
+// }
+
+// let message = 'Hello';
+// message = 123456;
+// console.log(message);
+
+// let n = 1.23;
+// n = 1.2345
+// console.log(n);
+
+// console.log( 1 / 0);
+// console.log(Infinity);
+// console.log('Not a number' / 2);
+// console.log(NaN + 1);
+// console.log(3 * NaN);
+// console.log("Not a number" / 2 -1 );
+
+// console.log(9007199254740991 + 1);
+// console.log(9007199254740991 + 2);
+
+// let name = 'john';
+// console.log(`Hello, ${name}`);
+// console.log(`the result is ${1 + 2}`);
+
+// let nameFieldChecked = true ;
+// let ageFieldChecked = false ;
+// console.log(nameFieldChecked);
+// console.log(ageFieldChecked);
+
+// let isGreater = 4 > 1;
+// console.log(isGreater);
+
+// let age;
+// console.log(age);
+
+// let age = 100;
+// age = undefined;
+// console.log(age);
+
+// let name = "Ilya";
+// console.log(`hello ${1 + 2}`);
+// console.log(`hello ${"name"}`);
+// console.log(`hello ${name}`);
+
+// let fruit = ["Apple" , "Orange", "Plum"];
+// fruit [2] = 'Pear';
+// fruit [3] = 'Lemon';
+// console.log(fruit[0]);
+// console.log(fruit[1]);
+// console.log(fruit[2]);
+// console.log(fruit[3]);
+// console.log(fruit.length);
+// console.log(fruit);
+
+// let arr = ['Apple', {name : 'John'}, true ,function() {console.log('Hello');}];
+// console.log(arr[1].name);
+// arr[3]();
+
+// let fruit = [
+//     "Apple",
+//     "Orange",
+//     "Plum"
+// ];
+// console.log(fruit);
+
+// let fruit = ["Apple" , "Orange" , "Plum"];
+// console.log(fruit[fruit.length-1]);
+
+// let fruit = ["Apple", "Orange", "plum" ];
+// console.log(fruit.at(-1));
+
+// let fruits = ["Apple" , "Orange" , "Pear"];
+// console.log(fruits.pop());
+// console.log(fruits);
+
+// let fruits = ["Apple" , "Orange"];
+// fruits.push("Pear");
+// console.log(fruits);
+
+// let fruits = ["Apple", "Orange"];
+// fruits[fruits.length] = "Pear";
+// console.log(fruits);
+
+// let fruits = ["Apple", "Orange", "Pear"];
+// console.log(fruits.shift());
+// console.log(fruits);
+
+// let fruit = ["Orange", "Pear"];
+// fruit.unshift('Apple');
+// console.log(fruit);
+
+// let fruit = ["Apple"];
+// fruit.push("Orange", "Peach");
+// fruit.unshift("Pineapple", "Lemon");
+// console.log(fruit);
+
+let fruits = ["Banana"];
+let arr = fruits;
+console.log(arr === fruits);
+arr.push("Pear");
+console.log(fruits);
