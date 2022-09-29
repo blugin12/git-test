@@ -1710,8 +1710,840 @@
 // fruit.unshift("Pineapple", "Lemon");
 // console.log(fruit);
 
-let fruits = ["Banana"];
-let arr = fruits;
-console.log(arr === fruits);
-arr.push("Pear");
-console.log(fruits);
+// let fruits = ["Banana"];
+// let arr = fruits;
+// console.log(arr === fruits);
+// arr.push("Pear");
+// console.log(fruits);
+
+// let fruits = ["Apple", "Orange", "Pear"];
+// console.log(fruits.length);
+
+//  let arr = ["Apple" , "Orange", "Pear"];
+//  for (let i=0 ; i < arr.length ; i++) {
+//     console.log(arr[i]);
+//  }
+
+// let fruits = ["Apple", "Orange", "Pear"];
+// for (let fruit of fruits) {
+//     console.log(fruit);
+// }
+
+// let arr = ["Apple", "Orange", "Pear"];
+// for (let key in arr) {
+//     console.log(arr[key]);
+// }
+
+// let fruit = [];
+// fruit[123] = "Apple";
+// console.log(fruit.length);
+
+// let arr = [1, 2, 3, 4, 5];
+// arr.length = 2;
+// console.log(arr);
+// arr.length = 5;
+// console.log (arr [3]);
+
+// let arr = new Array (2);
+// console.log(arr[0]);
+// console.log(arr.length);
+
+// let matrix = [
+//     [1,2,3],
+//     [4,5,6],
+//     [7,8,9]
+// ];
+// console.log(matrix[1][1]);
+
+// let arr = [1,2,3];
+// console.log(arr);
+// console.log(String(arr) === '1,2,3');
+
+// console.log( [] + 1);
+// console.log( [1] + 1);
+// console.log( [1,2] + 1);
+// console.log( "" + 1);
+// console.log( "1" + 1);
+// console.log( "1,2" + 1);
+
+// console.log( [] == []);
+// console.log( [0] == [0]);
+// console.log( 0 == []);
+// console.log( '0' == []);
+// console.log( 0 == '');
+// console.log( '0' == '');
+
+// let fruit = ["Apple", "Orange" , "Pear"];
+// console.log(fruit.at(-1));
+
+//Not Working
+// let arr = [item1 , item2];
+// console.log(arr);
+
+//Not Working
+// let arr = new Array (item1 , item2);
+// console.log(arr.length);
+
+// let fruit = ["Apple","Orange","Pear"];
+// let ShoppingCart = fruit ;
+// ShoppingCart.push("Banana");
+// console.log(fruit.length);
+
+// let style = ["jazz", "Blues"];
+// style.push("Rock-n-roll");
+// style[Math.floor((style.length -1) / 2)] = "Classic";
+// console.log(style.shift());
+// style.unshift("Rap","Reggae");
+
+// let arr = ["a","b"];
+// arr.push(function() {
+//     console.log( this );
+// })
+// arr[2]();
+
+// function sumInput () {
+//     let numbers = [];
+//     while (true) {
+//         let value = prompt ("A number please" , 0);
+//         if ( value === "" || value === null || !isFinite(value)) break;
+//         numbers.push(+value);
+//     }
+//     let sum = 0;
+//     for (let number of numbers){
+//         sum += number;
+//     }
+//     return sum;
+// }
+// console.log(sumInput());
+
+//Slow solution
+// function getMaxSubSum(arr) {
+//     let maxSum = 0;
+//     for (let i = 0; i < arr.length ; i++) {
+//         let sumFixedStart = 0;
+//         for (let j = i; j < arr.length; j++ ) {
+//             sumFixedStart += arr[j];
+//             maxSum = Math.max(maxSum, sumFixedStart);
+//         }
+//     }
+//     return maxSum;
+// }
+// console.log( getMaxSubSum([-1, 2, 3, -9]));
+// console.log( getMaxSubSum([-1, 2, 3, -9, 11]));
+// console.log( getMaxSubSum([-2, -1, 1, 2]));
+// console.log( getMaxSubSum([1, 2, 3]));
+// console.log( getMaxSubSum([100, -9, 2, -3, 5]));
+
+// Fast solution
+// function getMaxSubSum(arr) {
+//     let maxSum = 0;
+//     let partialSum = 0;
+
+//     for (let item of arr) {
+//         partialSum += item;
+//         maxSum = Math.max(maxSum, partialSum);
+//         if (partialSum < 0) partialSum = 0;
+//     }
+//     return maxSum;
+// }
+// console.log( getMaxSubSum([-1, 2, 3, -9]));
+// console.log( getMaxSubSum([-1, 2, 3, -9, 11]));
+// console.log( getMaxSubSum([-2 , -1, 1, 2]));
+// console.log( getMaxSubSum([100 , -9 , 2 ,-3 , 5]));
+// console.log( getMaxSubSum([1 ,2 ,3]));
+// console.log( getMaxSubSum([-1, -2, -3]));
+
+// //Return a number between 0 the 1
+// let random = Math.random();
+// console.log(random);
+
+//Return a number between 1 the 10
+// let random = Math.floor(Math.random() * 10) + 1;
+// console.log(random);
+
+//numbers
+// let amount = 6;
+// let price = 4.99;
+// console.log(amount, price);
+
+//String.length
+// let message = 'good nite';
+// console.log(message.length);
+// console.log('Hello'.length);
+
+//boolean
+// let lateToWork = true;
+// console.log(lateToWork);
+
+// console.log(Math.random());
+
+// let x = null;
+// console.log(x);
+
+// let single = 'Wheres my bandit hat';
+// let double = "Wheres my bandit hat";
+// console.log(single);
+// console.log(double);
+
+// // addition 
+// let a1 = 5 + 5;
+// // subtraction
+// let a2 = 10 - 5;
+// // multiplication
+// let a3 = 5 * 10;
+// // division
+// let a4 = 10 / 5;
+// // modulo
+// let a5 = 10 % 5;
+// console.log(a1, a2, a3, a4, a5);
+
+// let baseUr1 = 'localhost/taxwebapp/country';
+// console.log(baseUr1);
+
+// let weekINYear = Math.floor(365/7);
+// let daysLeftOver = 365 % 7;
+// console.log(" A year has " + weekINYear + " week and " + daysLeftOver + " days ");
+
+// let number = 100;
+// number = number + 10;
+// number += 10;
+// console.log(number);
+
+// let number = 100;
+// number = number - 10;
+// number -= 10;
+// console.log(number);
+
+// let number = 100;
+// number = number * 10;
+// number *= 10;
+// console.log(number);
+
+// let number = 100;
+// number = number / 10;
+// number /= 10;
+// console.log(number);
+
+// let age = 7;
+// console.log("Tommy is " + age + " year old");
+// console.log(`Tommy is ${age} year old`);
+
+// const currency = '$';
+// let userIncome = 85000;
+// console.log(currency + userIncome + ' is more than the average income.');
+
+// var a;
+// console.log(a);
+
+// let name = "Tammy";
+// const found = false;
+// var age = 3;
+// console.log(name , found , age);
+
+// var age = 17;
+// let weight = 50;
+// const numberOfFinger = 20;
+// console.log(age , weight ,numberOfFinger);
+
+// let name = "Codecademy";
+// console.log(`Hello, ${name}`);
+// console.log(`billy is ${6+8} year old`);
+
+// let count;
+// console.log(count);
+// count = 10 ;
+// console.log(count);
+
+//Not Working
+// const numberOfColumns = 4;
+// numberOfColumns = 8;
+// console.log(numberOfColumns);
+
+// let service = 'creatid card';
+// let month ='May 30th';
+// let displayText = 'Your ' + service + ' bill is due on ' + month + '.';
+// console.log(displayText);
+
+// console.log(true || false);
+// console.log(10 > 5 || 10 > 20);
+// console.log(false || false) ;
+// console.log(10 > 100 || 10 > 20);
+
+// let price = 10.5;
+// let day = "Monday";
+// day === "Monday" ? price -=1.5 : price += 1.5;
+// console.log(day ,price)
+
+// let isTaskCompleted = false;
+// if (isTaskCompleted) {
+//     console.log('Task completed');
+// } else {
+//     console.log('Task incompleted');
+// }
+
+// console.log(true && true);
+// console.log(1 > 2 && 2 > 1);
+// console.log(true && false);
+// console.log(true && false);
+// console.log(4 === 4 && 3 > 1);
+
+// let food = 'salad';
+// switch (food) {
+//     case 'oyster':
+//         console.log('The taste of the sea');
+//         break;
+//     case 'pizza':
+//         console.log('A delicious pie');
+//         break;
+//     default:
+//         console.log('Enjoy your meal');
+// }
+
+// let drink = 'water';
+// switch (drink) {
+//     case 'beer':
+//         console.log('Greet to part');
+//         break;
+//     case 'koi':
+//         console.log('Enjor with friend');
+//         break;
+//     default:
+//         console.log('Just drink it')
+// }
+
+// let isMailSent = true;
+// if (isMailSent) {
+//     console.log('Mail sent to recipient');
+// }
+
+// let lateToWork = true;
+// let oppositeValue = !lateToWork;
+// console.log(oppositeValue);
+
+// console.log(1 > 3);
+// console.log(3 > 1);
+// console.log(250 >= 250);
+// console.log(1 === 1);
+// console.log(1 === 2);
+// console.log(1 === '1');
+
+// let size = 10;
+// if (size > 100) {
+//     console.log('Big');
+// } else if (size > 20) {
+//     console.log('Medium');
+// } else if (size > 4) {
+//     console.log('Small');
+// } else {
+//     console.log('Tiny');
+// }
+
+// Arrow function with two arguments
+// let sum = (firstParam, secondParam) => {
+//     return firstParam + secondParam;
+// };
+// console.log(sum(2,5))
+
+//Arrow function with no arguments
+// let printHello = () => {
+//     console.log('hello');
+// };
+// printHello();
+
+//Arrow function with a single argument
+// let checkWeight = weight => {
+//     console.log(`Baggage weight : ${weight} kilograms.`);
+// };
+// checkWeight(25);
+
+//concise arrow function
+// let multiply = (a, b) => (a * b);
+// console.log(multiply(2,30)); 
+
+// Functions
+// function sum (num1, num2) {
+//     return num1 + num2;
+// }
+// console.log(sum(3,6));
+
+// function rockeToMars() {
+//     return 'BOOM!';
+// }
+// console.log(rockeToMars());
+
+// let rockeToMars = function () {
+//     return 'BOOM';
+// }
+// console.log(rockeToMars());
+
+// let dog = function () {
+//     return 'Woof!';
+// }
+// console.log(dog());
+
+// The parameter is nam
+// function sayHello(name) {
+//     return `Hello, ${name}!`;
+// }
+// console.log(sayHello());
+
+// function sum(num1 , num2 ) {
+//     return num1 + num2;
+// }
+// console.log(sum(1,2))
+
+// function add(num1 , num2) {
+//     return num1 + num2;
+// }
+// console.log(add(1,4));
+
+// function sum (num1 , num2) {
+//     return num1 + num2;
+// }
+// console.log(sum(2,4));
+
+// function myFunction () {
+//     let pizzaName = "Volvo";
+//     console.log(pizzaName);
+// }
+// myFunction();
+
+//Block Scoped Variables
+//Not Working
+// let isLoggedIn = true;
+// if (isLoggedIn == true) {
+//     let statusMessage = 'User is logged in.';
+// }
+// console.log(statusMessage);
+
+// let color = 'blue';
+// function printColor() {
+//     console.log(color);
+// }
+// printColor();
+
+// let numbers = [1, 2, 3, 4];
+// console.log(numbers.length);
+
+// let myArray = [100, 200, 300];
+// console.log(myArray[0]);
+// console.log(myArray[1]);
+// console.log(myArray[2]);
+
+// let cart = ['apple', 'orange'];
+// cart.push('pear');
+// console.log(cart);
+// let numbers = [1, 2];
+// numbers.push(3, 4, 5);
+// // console.log(numbers);
+
+// let ingredients = ['egg', 'flour', 'chocolate'];
+// let popedIngredient = ingredients.pop();
+// console.log(ingredients);
+
+// let name = ['Alice', 'Bob'];
+// name.push('carl');
+// console.log(name);
+
+// let numberArray = [0, 1, 2, 3];
+// let mixedArray = [1, 'chicken', false];
+// console.log(numberArray);
+// console.log(mixedArray);
+
+// Just example while (condition) {} 
+// let i = 0;
+// while (i < 5) {
+//     console.log(i);
+//     i++;
+// }
+
+// let item = ['apricot' , 'banana', 'cherry'];
+// for (let i = item.length -1 ;i >=0 ; i -=1 ) {
+//     console.log(`${i}, ${item[i]}`);
+// }
+
+// x = 0
+// i = 0
+// do {
+//     x = x + i;
+//     console.log(x);
+//     i++;
+// } while (i < 5);
+
+// for (let i =0 ; i < 4  ; i+= 1 ) {
+//     console.log(i);
+// };
+
+//Not Working
+// for (let i = 0 ; i < array.length; i++) {
+//     console.log(array[i]);
+// }
+
+// for (let i = 0 ; i < 99; i+= 1) {
+//     if (i > 5) {
+//         break;
+//     }
+//     console.log(i);
+// }
+
+// for (let outer = 0 ; outer < 2 ; outer += 1) {
+//     for (let inner = 0 ; inner < 3 ; inner += 1) {
+//         console.log(`${outer}-${inner}`);
+//     }
+// }
+
+//Not Working
+// let plusFive = (number) => {
+//     return number + 5;
+// };
+// let f = plusFive;
+// plusFive(3);
+// f(9);
+
+// let isEven = (n) => {
+//     return n % 2 == 0;
+// }
+// let printMsg = (evenFunc, num) => {
+//     let isNumEven = evenFunc(num);
+//     console.log(`The number ${num} is an even number: ${isNumEven},`)
+// }
+// printMsg(isEven, 4);
+
+//Working but Nothing
+// let originalFunc = (num) => { return num + 2};
+// let newFunc = originalFunc;
+// newFunc.name;
+// newFunc.toString();
+// newFunc.isMathFunction = true;
+// let functionNameLength = (func) => {
+//     return func.name.length
+// };
+// functionNameLength(originalFunc);
+// let returnFunc = () => {
+//     return newFunc
+// };
+// returnFunc();
+
+// let arrayOfNumbers = [1, 2, 3, 4];
+// let sum = arrayOfNumbers.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue;
+// })
+// console.log(sum);
+
+// let numbers = [28, 77, 45, 99, 27];
+// numbers.forEach(number => {
+//     console.log(number);
+// });
+
+// let randomNumbers = [4, 11, 42, 14, 39];
+// let filteredArray = randomNumbers.filter(n => {
+//     return n > 5;
+// })
+// console.log(filteredArray);
+
+// let finalParticipants = ['Taylor', 'Donald', 'Don', 'Natasha', 'Bobby'];
+// let announcements = finalParticipants.map(member => {
+//     return member + ' Joined the contest.';
+// })
+// console.log(announcements);
+
+//Wrong Code not Working
+// let trainSchedule = {
+//     platform num : 10,
+//     40 - 10 + 2: 30,
+//     +Comparttment: 'C'
+// }
+
+// let apple = { 
+//     color: 'Green',
+//     price: {
+//         bulk: '$3/kg',
+//         smallQty: '$4/kg'
+//     }
+// };
+// console.log(apple.color);
+// console.log(apple.price.bulk);
+
+// let classElection = {
+//     data: 'Januart 12'
+// };
+// console.log(classElectio.place);
+
+// let student = {
+//     name: 'Sheldon',
+//     score: 100,
+//     grade: 'A'
+// }
+// console.log(student);
+// delete student.score
+// student.grade = 'F'
+// console.log(student)
+// student = {}
+
+// let mobile = {
+//     brand: 'Samsung',
+//     model: 'Galaxy Note 9'
+// };
+// for (let key in mobile) {
+//      console.log(`${key}: ${mobile[key]}`);
+// }
+
+// let classof2018 = {
+//     students: 38,
+//     year: 2018
+// }
+// console.log(classof2018);
+
+// let person = {
+//     firstName: "Matilda",
+//     age: 27,
+//     hobby: "knitting",
+//     goal: "learning JavaScript"
+// };
+// delete person.hobby;
+// console.log(person);
+
+// let origNum = 8;
+// let origObj = {color: 'blue'};
+// let changeItUp = (num, obj) => {
+//     num = 7;
+//     obj.color = 'red';
+// };
+// changeItUp(origNum, origObj);
+// console.log(origNum);
+// console.log(origObj.color);
+
+// let engine = {
+//     start(adverb) {
+//         console.log(`The engine starts up ${adverb}...`);
+//     },
+//     sputter: () => {
+//         console.log('The engine sputters...');
+//     },
+// };
+// engine.start('noisilt');
+// engine.sputter();
+
+// let rubiksCubeFacts = { 
+//     possiblePermutations: '43,252,003,274,489,856,000',
+//     invented: '1974',
+//     largestCube: '17x17x17'
+// };
+// let {possiblePermutations, invented , largestCube} = rubiksCubeFacts;
+// console.log(possiblePermutations);
+// console.log(invented);
+// console.log(largestCube);
+
+// let activity = 'Surfing';
+// let beach = { activity };
+// console.log(beach);
+
+// let cat = {
+//     name: 'Pipey',
+//     age: 8,
+//     whatName() {
+//         return this.name
+//     }
+// };
+// console.log(cat.whatName());
+
+// let restaurant = {
+//     numCustomers: 45,
+//     seatCapacity: 100,
+//     availableSeats() {
+//         return this.seatCapacity - this.numCustomers;
+//     }
+// }
+// console.log(restaurant);
+
+// let myObj = {
+//     data: 'abc',
+//     loggerA: () => { console.log(this.data);},
+//     loggerB() {console.log(this.data);},
+// };
+// myObj.loggerA();
+// myObj.loggerB();
+
+//Work but show nothing
+// let myCat = {
+//     _name: 'Snickers',
+//     get more(){
+//         return this._name
+//     },
+//     set name(newName){
+//         if(typeof newName === 'string' && newName.length > 0){
+//             this._name = newName;
+//         } else {
+//             console.log("ERROR: name must be a non-empty string");
+//         }
+//     }
+// }
+
+//Work but show nothing
+// let dogFactory = (name, age, breed) => {
+//     return {
+//         name: name,
+//         age: age,
+//         breed: breed,
+//         bark() {
+//             console.log('Woof!');
+//         }
+//     };
+// };
+
+// let myCat = {
+//     _name: 'Dottie',
+//     get name() {
+//         return this._name;
+//     },
+//     set name(newName) {
+//         this._name = newName;
+//     }
+// };
+// console.log(myCat.name);
+// myCat._name = 'Yankee';
+
+// Coding Challenge Review
+
+// # Return "Hello World" from hello function.
+// function hello() {
+//     return 'Hello World';
+// }
+// console.log(hello());
+
+// # Create a function that takes two numbers as arguments and returns their sum.
+// function addition(num1 , num2) {
+//     return num1 + num2;
+// }
+// console.log(addition(3,2));
+
+// # Create a function that takes a numbers as its only aargument and returns true if
+// it's less than or equal to zero, otherwise return false.
+// function lessThanOrEqualToZero (a) {
+//     if ( a <= 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// } 
+// console.log(lessThanOrEqualToZero(5));
+
+// # Create a function that returns true when num1 is equal to num2; otherwse return false.
+// function isSameNum (a , b) {
+//     if (a === b) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log(isSameNum(2,2));
+
+// # Create a function that make takes a number as an argument. Add up all the numbers
+// from 1 to the number you passed to the function. For example, if the input is 4
+// then your function should return 10 because 1 + 2 + 3 + 4 = 10.
+// function numbers (a) {
+//     let sum = 0;
+//     for (let i = 1 ; i <= a ; i++) {
+//         sum += i;
+//     }
+//     return sum;
+// }
+// console.log(numbers(4))
+
+// # Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
+// function lessThan (a , b) {
+//     if (a + b < 100) {
+//         console.log(true);
+//     } else {
+//         console.log(false);
+//     }
+// }
+// lessThan(50,49);
+
+// # Create a function that takes an array of numbers and return both the minimum and
+// maximum number, in that order.
+// let minMaxValues = (arr) => {
+//     let maxValues;
+//     let minValues;
+//     for (let i = 0; i < arr.length; i++) {
+//         if(arr[i] < arr[1]) {
+//             minValues =arr [i];
+//         }
+//         if(arr[i] > arr[arr.length-2]){
+//             maxValues =arr[i];
+//         }
+//     }
+//     console.log(minValues ,maxValues);
+// }
+// minMaxValues([1, 2, 3, 4, 5]);
+
+// # Christmas Eve is almost upon is, so naturally we need to prepare some milk and 
+// cookies for Santa! Create a function that accepts a Date object and returns true if
+// it's Christmas Eve (December 24th) and false otherwise,
+// function timeForMilkAndCookies (dateToTest) {
+//     return (dateToTest.getFullYear()) &&
+//            (dateToTest.getMonth() === 11) &&
+//            (dateToTest.getDate() == 24);
+// }
+// console.log(timeForMilkAndCookies(new Date(2013, 11 ,24)));
+// console.log(timeForMilkAndCookies(new Date(2013, 0, 23))); 
+// console.log(timeForMilkAndCookies(new Date(3000, 11 ,24)));
+
+// # Create a function that returns true if the first array can be nested inside the second and false otherwise.
+// let canNest = (arr1 , arr2) => {
+//     if (Math.min(...arr1) > Math.min(...arr2) && Math.max(...arr1) < Math.max(...arr2)) {
+//         return true;
+//     } else return false;
+// };
+// console.log(canNest([1, 2, 3, 4], [0,6]));
+// console.log(canNest([3, 1], [4,0]));
+// console.log(canNest([9, 9, 8], [8, 9]));
+// console.log(canNest([1, 2, 3, 4], [2, 3]));
+
+// # Create a function that calculates the number N*N
+// function calcculate (a) {
+//     return `${a} * ${a}`;
+// }
+// console.log(calcculate(4));
+
+// #Assume that the following arry of drink objects needs to be sorted
+// function drink () {
+//     let drinks = [
+//         {name: "lemonade", price: 50},
+//         {name: "lime", price: 10}
+//     ];
+//     console.log(drinks);
+// }
+// drink();
+
+// # Write a function that takes a two-digit number and determines if 
+// it's the largest of two possible digit swaps.
+// function largestSwap (num) {
+//     num = num.toString();
+//     if (num < 0) {
+//         return num[1] <= num[2];
+//     } 
+//     return num[0] >= num[1];
+// }
+// console.log(largestSwap(43));
+
+// # Create a function that takes two numbers and a mathematical operator + - / * 
+// and will perform a calcuulation with the given numbers.
+// function calculates (a, b) {
+//     let calcu = {
+//         Plus: a + b,
+//         Minus: a - b,
+//         Multiply: a * b,
+//         divide: a / b
+//     }
+//     console.log(calcu);
+// }
+// calculates(1, 2);
+
+// # Create a function that's fetch data from this api: 'https://jsonplaceholder.typicode.com/todos/1'
+// async function work () {
+//     await fetch('https://jsonplaceholder.typicode.com/todos/1')
+//     .then(response => response.json())
+//     .then(json => console.log(json))
+// }
+// work();
